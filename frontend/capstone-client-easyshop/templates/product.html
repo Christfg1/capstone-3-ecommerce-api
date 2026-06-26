@@ -1,0 +1,24 @@
+{{#products}}
+<div class="product">
+    <div>
+        <h4>{{name}}</h4>
+        <div class="photo">
+            <img class="product-photo" src="./images/products/{{imageUrl}}" alt="{{name}}"
+                 data-name="{{name}}" data-image="./images/products/{{imageUrl}}"
+            >
+          <h4 class="price">${{priceDisplay}}</h4>
+        </div>
+        <div>
+            <p>{{description}}</p>
+            <p class="stock" data-stock="{{stock}}">{{stock}} in stock</p>
+        </div>
+
+    </div>
+    <div class="add-button">
+        <button class="btn btn-success" onclick="cartService.addToCart({{productId}})">Add to Cart</button>
+    </div>
+    <div class="admin-button invisible">
+        <button class="btn btn-outline-secondary" onclick="productService.showEditForm({{productId}})">Edit</button>
+    </div>
+</div>
+{{/products}}

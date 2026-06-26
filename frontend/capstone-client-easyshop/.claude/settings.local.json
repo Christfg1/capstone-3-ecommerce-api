@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find / -iname \"*.postman_collection.json\" -o -iname \"*.postman_environment.json\" 2>/dev/null | head -20)"
+    ]
+  }
+}
